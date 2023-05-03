@@ -22,3 +22,4 @@ $router->post('/customers', 'CustomerController@store');
 $router->get('/customers/{customer}', 'CustomerController@show');
 $router->post('/updatecustomer/{customer}', 'CustomerController@updatecustomer');
 $router->delete('/customers/{customer}', 'CustomerController@destroy');
+$router->get('/customerscommon', 'CustomerController@customerCommonFunction');

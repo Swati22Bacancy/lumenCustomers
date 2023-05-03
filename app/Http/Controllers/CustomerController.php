@@ -6,6 +6,7 @@ use App\Models\Customer;
 use App\Traits\ApiResponser;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use App\Helpers\CommonHelper;
 
 class CustomerController extends Controller
 {
@@ -84,5 +85,9 @@ class CustomerController extends Controller
         return $this->successResponse($customer);
     }
 
-    //
+    public function customerCommonFunction()
+    {
+        $randomString = CommonHelper::generateRandomString(8);
+        return $this->successResponse($randomString);
+    }
 }
